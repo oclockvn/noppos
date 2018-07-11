@@ -60,10 +60,10 @@
 
   <div class="main">
 
-    <div class="pos-content">
-      <div class="pos-left">
+    <div class="pos-content h-100">
+      <div class="d-flex flex-column pos-left">
         
-        <div class="pos-cart-container">
+        <div class="flex-fill p-2 pos-cart-container bg-white">
           
           <!-- ko foreach: cartItems -->
           <div class="cart-item">
@@ -75,9 +75,9 @@
             </div>
             <div class="i-name">Lorem ipsum dolor sit amet consectetur adipisicing elit</div>
             <div class="i-qty">
-              <button class="btn btn-sm"><i class="mdi mdi-minus"></i></button>
-              <input type="text">
-              <button class="btn btn-sm"><i class="mdi mdi-plus"></i></button>
+              <button class="btn btn-sm btn-light qty-button des-qty border-0"><i class="mdi mdi-minus"></i></button>
+              <input type="text" class="qty-input md-textbox">
+              <button class="btn btn-sm btn-light qty-button inc-qty border-0"><i class="mdi mdi-plus"></i></button>
             </div>
             <div class="i-warning">
               <i class="mdi mdi-warning"></i>
@@ -90,9 +90,9 @@
         </div>
         <!-- /cart -->
 
-        <div class="category-container">
+        <div class="category-container d-flex">
 
-          <div class="categories">
+          <div class="categories p-2">
 
             <!-- ko foreach: categories -->
             <a class="category" href="#">
@@ -103,17 +103,17 @@
           </div>
           <!-- /categories -->
 
-          <div class="products">
+          <div class="d-flex flex-fill flex-wrap p-2 products overflow-auto">
 
             <!-- ko foreach: products -->
-            <a href="#">product</a>
+            <a href="#" class="product">product</a>
             <!-- /ko -->
 
           </div>
         </div>
       </div>
 
-      <div class="pos-right">
+      <div class="pos-right d-flex flex-column">
         
         <section class="align-items-center d-flex p-2">
           <span class="mr-2">
@@ -141,7 +141,7 @@
           <div class="bg-success d-inline-block mx-2 px-4 py-1 radius--top text-white">Invoice</div>
         </div>
 
-        <section class="_">
+        <section class="flex-fill">
           
           <div class="d-flex p-2">
             <div class="flex-fill">
@@ -193,8 +193,8 @@
 
         </section>
 
-        <div class="_">
-          <button class="btn btn-success btn-lg">
+        <div class="p-2">
+          <button class="btn btn-success btn-lg py-4 btn-block">
             checkout (F9)
           </button>
         </div>
