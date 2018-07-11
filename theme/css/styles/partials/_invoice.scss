@@ -1,0 +1,52 @@
+.invoices {
+    overflow: hidden;
+
+    li {
+        background: #fff;
+        color: #000;
+        padding: 8px 12px;
+        border-radius: 3px 3px 0 0;
+        background: rgba(0, 0, 0, 0.1);
+        transition: .25s ease-in;
+        color: hsl(0, 0%, 76%);
+        cursor: pointer;
+        box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+        margin-right: 6px;
+        display: flex;
+        
+        &.active {    
+            background: #fff;
+            color: #000;
+            padding: 8px 12px;
+            border-radius: 3px 3px 0 0;    
+
+            .close-button {
+                color: #f42;
+            }
+        }
+
+        &:hover {
+            &:not(.active) {
+                background: rgba(0, 0, 0, 0.3);
+            }
+        }
+
+        .close-button {
+            color: hsl(0, 0%, 66%);            
+            margin-left: 8px;
+        }
+    }
+}
+
+.add-invoice {
+    background: rgba(0,0,0,.1);
+    border-radius: 3px 3px 0 0;
+    color: #fff;
+    transition: .25s ease-in;
+    min-width: 41px;
+
+    &:hover {
+        background: rgba(0,0,0,.3);    
+        color: #fff;
+    }
+}
