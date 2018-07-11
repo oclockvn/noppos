@@ -90,11 +90,19 @@
       -ms-flex-align: center;
           align-items: center; }
   .pos-header .header-right {
-    border: 1px solid;
     -webkit-box-flex: 1;
         -ms-flex: 1;
             flex: 1;
     text-align: right; }
+    .pos-header .header-right .button--flex {
+      padding: 8px;
+      min-width: 41px;
+      color: #fff;
+      background: rgba(0, 0, 0, 0.1);
+      border-radius: 3px;
+      margin-right: 8px; }
+      .pos-header .header-right .button--flex:hover {
+        background: rgba(0, 0, 0, 0.3); }
 
 .search-container {
   padding: 8px;
