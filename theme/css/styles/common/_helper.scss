@@ -78,3 +78,15 @@
     top: 0;
     z-index: $stuck-index;
 }
+
+.circle {
+    border-radius: 50%;
+}
+
+.radius--top {
+    border-radius: 3px 3px 0 0;
+}
+
+.border-color-main {
+    border-color: $main-color !important;
+}
