@@ -75,10 +75,11 @@
           <div class="cart-item">
             <!-- <div class="i-order">1</div> -->
             <div class="i-check">
-              <label class="i-check-label" for="" data-bind="click: $root.toggle">
-                  <span data-bind="text: $index"></span> 
-                  <input type="checkbox" class="i-check-input" data-bind="checked: isChecked()"> PRODUCTCODE
-              </label>
+              <div class="i-check-label">
+                  <span data-bind="text: $index, click: $root.toggle"></span> 
+                  <input type="checkbox" class="i-check-input" data-bind="checked: isChecked">  
+                  <span data-bind="click: $root.toggle">PRODUCTCODE</span>
+              </div>
             </div>
             <div class="i-name">Lorem ipsum dolor sit amet consectetur adipisicing elit</div>
             <div class="i-qty">

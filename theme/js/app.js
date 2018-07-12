@@ -22,7 +22,7 @@ class AppViewModel {
         }
     }
     
-    toggle(data) {
+    toggle(data) {       
         data.isChecked(!data.isChecked());
     }
 
