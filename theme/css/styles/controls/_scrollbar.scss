@@ -1,0 +1,45 @@
+::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+}
+
+// ::-webkit-scrollbar {
+//     width: 6px;
+//     height: 6px;
+// }
+// ::-webkit-scrollbar {
+//     width: 8px;
+//     height: 8px;
+// }
+
+// thumb
+::-webkit-scrollbar-thumb {
+    width: 6px;
+    border-radius: 4px;
+    background-color: #c1c1c1;
+}
+
+// ::-webkit-scrollbar-thumb {
+//     width: 6px;
+//     border-radius: 4px;
+//     background-color: #c1c1c1;
+// }
+
+// ::-webkit-scrollbar-thumb {
+//     width: 8px;
+//     border-radius: 4px;
+//     background-color: #c1c1c1;
+// }
+
+// track
+::-webkit-scrollbar-track {
+    padding: 6px;
+}
+
+// ::-webkit-scrollbar-track {
+//     padding: 6px;
+// }
+
+// ::-webkit-scrollbar-track {
+//     padding: 6px;
+// }

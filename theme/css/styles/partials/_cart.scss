@@ -1,5 +1,7 @@
 .category-container {
     height: 300px;
+    background: #fff;
+    border-top: 1px solid #eee;
 }
 
 .pos-cart-container {
@@ -9,11 +11,14 @@
 
 .categories {   
     overflow-y: auto;
+    min-width: 124px;
+    background: #fff;
 
     .category {  
         display: block;
         height: 100px;
         width: 100px;
+        background: $main-color;
 
         + .category {
             margin-top: 8px;
@@ -22,13 +27,22 @@
 }
 
 .products {
-    .product {
-        border: 1px solid;
+    .product {        
         display: block;
-        max-width: calc(100% / 9);
+        // max-width: calc(100% / 9);
         min-width: calc(100% / 9);
         min-height: 150px;
-        margin: 0 8px 8px 0;
+        // margin: 0 16px 16px 0;
+        background: #fff;    
+        text-decoration: none;
+        transition: .25s ease;
+        border-radius: 3px;
+
+        &:hover {
+            box-shadow: 0 8px 17px 2px rgba(0, 0, 0, 0.14), 0 3px 14px 2px rgba(0, 0, 0, 0.12), 0 5px 5px -3px rgba(0, 0, 0, 0.2);
+            transform: translateY(-8px);
+            z-index: 2;
+        }
     }
 }
 
