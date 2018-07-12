@@ -1,11 +1,11 @@
 .category-container {
-    height: 300px;
+    height: 316px;
     background: #fff;
     border-top: 1px solid #eee;
 }
 
 .pos-cart-container {
-    height: calc(100% - 366px);
+    height: calc(100% - 372px);
     overflow: auto;   
 }
 
@@ -67,13 +67,48 @@
         // margin: 0 16px 16px 0;
         background: #fff;    
         text-decoration: none;
-        transition: .25s ease;
+        transition: .6s ease-out;
         border-radius: 3px;
 
         &:hover {
             box-shadow: 0 8px 17px 2px rgba(0, 0, 0, 0.14), 0 3px 14px 2px rgba(0, 0, 0, 0.12), 0 5px 5px -3px rgba(0, 0, 0, 0.2);
             transform: translateY(-8px);
             z-index: 2;
+        }
+
+        .product-image {
+            max-width: 100%;
+        }
+        
+        .product-name {           
+            display: block;
+            // white-space: nowrap;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            height: 100%;
+            width: 100%;
+            font-size: .8em;
+            color: #fff;
+            padding: 4px 8px;
+            text-overflow: ellipsis;
+            overflow: hidden;
+            background: linear-gradient(to top, rgba(0, 0, 0, 0.3), transparent);            
+            display: flex;
+            align-items: flex-end;
+            right: 0;
+            flex-wrap: nowrap;
+            transition: .6s ease;
+        }
+        
+        &:hover {
+            .product-name {
+                background: linear-gradient(to top, rgba(0, 0, 0, 0.6), transparent);
+            }
+        }
+
+        .box-content {
+            padding: 16px;
         }
     }
 }
@@ -90,10 +125,19 @@
 
     .i-name {
         flex: 1;
+        padding-left: 100px;
     }
     
     .i-check {
-        padding: 0 16px;
+        .i-check-label {
+            display: flex;
+            align-items: center;
+        }
+
+        .i-check-input {
+            margin: 0 16px;
+            margin-bottom: 2px;
+        }
     }
     
     .i-total {
@@ -104,6 +148,10 @@
         margin-left: 50px;
     }
 
+    .i-warning {
+        color: #f42;
+    }
+
     .i-qty {
         .qty-input {
             max-width: 60px;
@@ -111,6 +159,8 @@
 
         .qty-button {
             background: transparent;
+            opacity: 0;
+            background: rgba(0, 0, 0, .1);
 
             &:hover {
                 background: rgba(0, 0, 0, .2);
@@ -124,5 +174,13 @@
 
     &:nth-child(2n) {
         background: #fff;
+    }
+
+    &:hover {
+        background: #edf6e4;
+
+        .qty-button {
+            opacity: 1;
+        }
     }
 }

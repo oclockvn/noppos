@@ -67,10 +67,11 @@
           
           <!-- ko foreach: cartItems -->
           <div class="cart-item">
-            <div class="i-order">1</div>
+            <!-- <div class="i-order">1</div> -->
             <div class="i-check">
-              <label for="">
-                  <input type="checkbox"> PRODUCTCODE
+              <label class="i-check-label">
+                  <span data-bind="text: $index"></span> 
+                  <input type="checkbox" class="i-check-input"> PRODUCTCODE
               </label>
             </div>
             <div class="i-name">Lorem ipsum dolor sit amet consectetur adipisicing elit</div>
@@ -80,7 +81,7 @@
               <button class="btn btn-sm btn-light qty-button inc-qty border-0"><i class="mdi mdi-plus"></i></button>
             </div>
             <div class="i-warning">
-              <i class="mdi mdi-warning"></i>
+              <i class="mdi mdi-alert"></i>
             </div>
             <div class="i-price">25,000</div>
             <div class="i-total">25,000</div>
@@ -92,7 +93,7 @@
 
         <div class="category-container d-flex">
 
-          <div class="categories p-2">
+          <div class="categories p-2 py-3">
 
             <!-- ko foreach: categories -->
             <a class="category" href="#">
@@ -109,7 +110,10 @@
             <!-- ko foreach: products -->
             <a href="#" class="product box">              
               <div class="box-hack"></div>
-              <div class="box-content"></div>
+              <div class="box-content">
+                <img class="product-image" src="images/pizza.png" alt="">
+                <span class="product-name">Lorem ipsum dolor, sit amet consectetur</span>
+              </div>
             </a>
             <!-- /ko -->
 
