@@ -19,7 +19,7 @@
 
 <body>
   <header class="header" id="header">
-    <div class="pos-header">
+    <div class="pos-header position-relative">
       
       <div class="bg-white search-container">
         <i class="mdi mdi-magnify text-black-50"></i>
@@ -54,6 +54,12 @@
       </div>
       <!-- /right side -->
 
+      <div class="action-buttons" data-bind="visible: hasSelectedItems()">
+        <span class="mr-5"><span data-bind="text: checkedItems"></span> items selected</span>
+        <button class="btn btn-outline-light mr-2 text-uppercase" data-bind="click: uncheckAll">remove <i class="ml-2 mdi mdi-delete"></i></button>
+        <button class="btn btn-link text-white" data-bind="click: uncheckAll"><i class="mdi mdi-close"></i></button>
+      </div>
+
     </div>
   </header>
   <!-- /header -->
@@ -69,9 +75,9 @@
           <div class="cart-item">
             <!-- <div class="i-order">1</div> -->
             <div class="i-check">
-              <label class="i-check-label">
+              <label class="i-check-label" for="" data-bind="click: $root.toggle">
                   <span data-bind="text: $index"></span> 
-                  <input type="checkbox" class="i-check-input"> PRODUCTCODE
+                  <input type="checkbox" class="i-check-input" data-bind="checked: isChecked()"> PRODUCTCODE
               </label>
             </div>
             <div class="i-name">Lorem ipsum dolor sit amet consectetur adipisicing elit</div>
